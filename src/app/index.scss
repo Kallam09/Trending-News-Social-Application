@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,100&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scrollbar-width:thin;
+  scrollbar-color:#263238;
+}
+::-webkit-scrollbar{
+  width:5px;
+  background:#f5f5f5;
+} 
+::-webkit-scrollbar-track{
+  border-radius:10px;
+}
+::-webkit-scrollbar-thumb{
+  background:#263238;
+}
+html,body{
+  height:100%;
+  font-family: 'Lato', sans-serif;
+}
+body{
+  font-size:16px;
+  color:#424242;
+  position:relative;
+}
+div#root{
+  display: grid;
+  grid-column-gap: 0;
+  grid-row-gap: 0;
+  grid-template-columns: 25% 25% 25% 25%;
+}
+
+.news-app-icons{
+  cursor: pointer;
+}
+
+.topicImage{
+  background-image:none;
+  transition: background-image 1s linear;
+}
+
+.site-nav{
+  height:0px;
+  transition: height 1s linear;
+}
+
+.select_topic{
+  display:none;
+  transition:display 2s;
+}
+.fade-in-enter{
+  opacity:0;
+}
+.fade-in-enter-active{
+  opacity:1;
+  transition:opacity 200ms;
+}
+.fade-in-exit{
+  opacity:1;
+}
+.fade-in-exit-active{
+  opacity:0;
+  transition:opacity 200ms;
+}
+
+@keyframes  pageloaderanim{
+  0%{
+    fill:url(#paint1);
+  }
+  50%{
+    fill:url(#paint2);
+  }
+  100%{
+    fill:url(#paint3);
+  }
+}
+
+text.pageLoader{
+  animation-name: pageloaderanim;
+  animation-duration: 1s;
+  animation-direction: alternate-reverse;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
